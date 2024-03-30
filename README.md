@@ -168,6 +168,55 @@
 - **Use Cases**:
     - Time series prediction, machine translation.
 
+### **Overview**
+- **Purpose**: LSTMs address the vanishing gradient problem in traditional RNNs.
+- **Memory Cells**:
+    - LSTMs have memory cells that allow them to capture long-term dependencies.
+    - These cells maintain information over multiple time steps.
+
+### **Architecture**
+1. **Cell State (C_t)**:
+    - The core of an LSTM.
+    - Carries information across time steps.
+    - Controlled by gates (input, forget, output).
+
+2. **Gates**:
+    - **Input Gate (i_t)**:
+        - Determines how much new information to store in the cell state.
+    - **Forget Gate (f_t)**:
+        - Controls what information to discard from the cell state.
+    - **Output Gate (o_t)**:
+        - Determines the output based on the cell state.
+
+3. **Hidden State (h_t)**:
+    - The output of the LSTM cell.
+    - Captures relevant information for the current time step.
+
+### **Training and Backpropagation**
+- **Backpropagation Through Time (BPTT)**:
+    - Adjusts weights based on prediction errors.
+    - Minimizes a loss function (e.g., mean squared error, cross-entropy).
+
+### **Use Cases**
+- **Sequence-to-Sequence Tasks**:
+    - Language modeling, machine translation, speech recognition.
+- **Time Series Prediction**:
+    - Forecasting stock prices, weather conditions, or energy demand.
+- **Natural Language Processing (NLP)**:
+    - Sentiment analysis, text generation.
+
+### **Extensions**
+- **Bidirectional LSTMs (BiLSTMs)**:
+    - Process sequences in both forward and backward directions.
+    - Capture context from past and future time steps.
+
+- **Stacked LSTMs**:
+    - Multiple LSTM layers stacked on top of each other.
+    - Learn hierarchical features.
+
+*LSTMs are powerful tools for handling sequential data with long-term dependencies.*
+
+
 ## 5. Gated Recurrent Unit (GRU) Networks
 
 - **Purpose**: Streamlined version of LSTMs.
