@@ -117,6 +117,49 @@
 - **Use Cases**:
     - Language modeling, speech recognition, and sentiment analysis.
 
+### **Overview**
+- RNNs are a class of neural networks specifically designed for sequential data, such as time series or natural language.
+- Unlike feedforward neural networks, RNNs have a concept of **"memory"** that allows them to maintain information about previous computations.
+- RNNs perform the same task for every element of a sequence, with the output depending on previous computations.
+
+### **Architecture**
+1. **Hidden States**:
+   - RNNs maintain hidden states (internal memory) that capture information from previous time steps.
+   - Each hidden state influences the next one.
+
+2. **Time Steps**:
+   - RNNs process input sequences one time step at a time.
+   - At each time step, the hidden state is updated based on the current input and the previous hidden state.
+
+3. **Vanishing Gradient Problem**:
+   - RNNs suffer from vanishing gradients during training.
+   - Long sequences make it challenging to learn dependencies across distant time steps.
+
+### **Applications**
+- **Natural Language Processing (NLP)**:
+   - RNNs excel in tasks like language modeling, machine translation, and sentiment analysis.
+   - They capture context and sequential patterns in text.
+
+- **Time Series Prediction**:
+   - RNNs predict future values in time series data (e.g., stock prices, weather forecasts).
+   - They learn temporal dependencies.
+
+### **Challenges**
+- **Short-Term Memory**:
+   - RNNs struggle with long-term dependencies due to vanishing gradients.
+   - **Long Short-Term Memory (LSTM)** and **Gated Recurrent Unit (GRU)** architectures address this issue.
+
+### **Extensions**
+- **LSTM Networks**:
+   - Specialized RNN cells with memory gates.
+   - Can learn long-term dependencies.
+
+- **GRU Networks**:
+   - Similar to LSTMs but with fewer parameters.
+   - Simplified architecture.
+
+*RNNs are powerful tools for handling sequential data, but their limitations led to the development of more advanced architectures like LSTMs and GRUs.*
+
 ## 4. Long Short-Term Memory (LSTM) Networks
 
 - **Purpose**: Capture long-term dependencies in sequential data.
