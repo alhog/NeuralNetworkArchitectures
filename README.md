@@ -20,6 +20,40 @@
     - Neurons in each layer are fully connected.
 - **Use Cases**:
     - Regression, classification, and basic pattern recognition.
+ 
+## **Feedforward Neural Networks (FNNs)**
+
+### **Overview**
+- FNNs, also known as multilayer perceptrons (MLPs), are the foundation of deep learning.
+- They consist of an input layer, one or more hidden layers, and an output layer.
+- Neurons in each layer are fully connected to the next layer.
+
+### **Architecture**
+1. **Input Layer**:
+   - Receives input features (data points).
+   - Each neuron corresponds to a feature.
+
+2. **Hidden Layers**:
+   - Intermediate layers between input and output.
+   - Learn complex representations.
+   - Each neuron computes a weighted sum of inputs and applies an activation function (e.g., ReLU, sigmoid).
+
+3. **Output Layer**:
+   - Produces the final prediction or classification.
+   - Activation function depends on the task (e.g., softmax for multiclass classification).
+
+### **Training and Backpropagation**
+- **Backpropagation Algorithm**:
+   - Adjusts weights based on prediction errors.
+   - Minimizes a loss function (e.g., mean squared error, cross-entropy).
+
+### **Use Cases**
+- FNNs are versatile and used for various tasks:
+   - Regression (predicting continuous values).
+   - Classification (image recognition, sentiment analysis).
+   - Function approximation.
+
+*FNNs are building blocks for more complex architectures.*
 
 ## 2. Convolutional Neural Networks (CNNs)
 
