@@ -65,6 +65,53 @@
 - **Use Cases**:
     - Image recognition, object detection, and segmentation.
 
+### **Convolutional Neural Networks (CNNs)**
+
+#### **Overview**
+- **Purpose**: CNNs are specifically designed for image and spatial data.
+- **Structure**:
+    - **Convolutional Layers**:
+        - Learn local patterns (edges, textures) from input images.
+        - Use convolutional filters (kernels) to extract features.
+    - **Pooling Layers**:
+        - Downsample feature maps to reduce spatial dimensions.
+        - Common pooling methods: max pooling, average pooling.
+    - **Fully Connected Layers**:
+        - Traditional neural network layers for classification or regression.
+        - Flatten feature maps and connect to output neurons.
+
+### **Key Concepts**
+1. **Convolutional Filters (Kernels)**:
+    - Small windows that slide over the input image.
+    - Detect specific features (edges, corners, textures).
+    - Learn weights during training.
+
+2. **Stride and Padding**:
+    - **Stride**: Step size for filter movement.
+    - **Padding**: Adding zeros around the input to maintain spatial dimensions.
+
+3. **Feature Maps**:
+    - Output of convolutional layers.
+    - Each feature map represents a specific feature detected by filters.
+
+### **Use Cases**
+- **Image Recognition and Classification**:
+    - CNNs excel at identifying objects, faces, and patterns in images.
+    - Applications: self-driving cars, medical imaging, security surveillance.
+- **Object Detection and Localization**:
+    - Detect and locate multiple objects within an image.
+    - Popular architectures: YOLO (You Only Look Once), Faster R-CNN.
+- **Image Style Transfer**:
+    - Transform images to resemble the style of famous paintings.
+    - Combine content and style features.
+
+### **Transfer Learning and Pretrained Models**
+- **Transfer Learning**:
+    - Use pretrained CNNs (e.g., VGG, ResNet, Inception) as feature extractors.
+    - Fine-tune on specific tasks with limited data.
+
+*CNNs revolutionized computer vision and continue to drive advancements in image understanding.*
+
 ## 3. Recurrent Neural Networks (RNNs)
 
 - **Purpose**: Handle sequential data (time series, natural language).
