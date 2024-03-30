@@ -223,6 +223,39 @@
 - **Efficiency**: Achieves comparable performance with faster computation.
 - **Key Idea**: Retains memory concept while simplifying architecture.
 
+### **Overview**
+- **Purpose**: GRUs are a streamlined version of the LSTM memory cell.
+- **Efficiency**: They often achieve comparable performance to LSTMs but with faster computation.
+- **Key Idea**: Retain the key idea of incorporating an internal state and multiplicative gating mechanisms while simplifying the architecture.
+
+### **Architecture**
+1. **Reset Gate and Update Gate**:
+   - Replace the three gates in LSTMs with two:
+       - **Reset Gate (R_t)**: Controls how much of the previous state to remember.
+       - **Update Gate (Z_t)**: Controls how much of the new state is a copy of the old one.
+   - Both gates have sigmoid activations.
+
+2. **Candidate Hidden State (H~_t)**:
+   - Integrates the reset gate with the regular updating mechanism.
+   - Computed as a candidate hidden state at time step t.
+
+### **Mathematical Formulation**
+- For a given time step t:
+   - Input: Minibatch X_t ∈ R^(n × d) (number of examples = n; number of inputs = d).
+   - Hidden state of the previous time step: H_(t-1) ∈ R^(n × h) (number of hidden units = h).
+   - Reset gate R_t ∈ R^(n × h) and update gate Z_t ∈ R^(n × h):
+       - R_t = σ(X_t W_xr + H_(t-1) W_hr + b_r)
+       - Z_t = σ(X_t W_xz + H_(t-1) W_hz + b_z)
+   - Candidate hidden state H~_t ∈ R^(n × h):
+       - H~_t = tanh(X_t W_xh + (R_t ⊙ H_(t-1)) W_hh + b_h)
+
+### **Use Cases**
+- GRUs are effective for:
+   - Language modeling, machine translation, and speech recognition.
+   - Tasks involving sequential data.
+
+*GRUs offer a balance between performance and computational efficiency.*
+
 ## 6. Autoencoders
 
 - **Purpose**: Unsupervised learning for dimensionality reduction and feature learning.
