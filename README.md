@@ -20,8 +20,6 @@
     - Neurons in each layer are fully connected.
 - **Use Cases**:
     - Regression, classification, and basic pattern recognition.
- 
-## **Feedforward Neural Networks (FNNs)**
 
 #### **Overview**
 - FNNs, also known as multilayer perceptrons (MLPs), are the foundation of deep learning.
@@ -64,8 +62,6 @@
     - Fully connected layers handle classification.
 - **Use Cases**:
     - Image recognition, object detection, and segmentation.
-
-### **Convolutional Neural Networks (CNNs)**
 
 #### **Overview**
 - **Purpose**: CNNs are specifically designed for image and spatial data.
